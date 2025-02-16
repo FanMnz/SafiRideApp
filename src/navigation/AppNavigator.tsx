@@ -1,19 +1,24 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-//import HomeScreen from "../screens/HomeScreen";
-import HomeScreen from "../../app/index"; 
+import HomeScreen from "../../app/index"; // Ton écran d'accueil
+import ExploreScreen from "../../app/explore"; // Un autre écran (qu'on va créer après)
 
-const Stack = createStackNavigator();
+// 🔹 Définition des types des écrans
+export type RootStackParamList = {
+  Home: undefined;
+  Explore: undefined;
+};
 
-const AppNavigator = () => {
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+export default function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Explore" component={ExploreScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
-
-export default AppNavigator;
+}
