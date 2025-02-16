@@ -5,10 +5,9 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "react-native",
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "~/*": ["./*"]
     }
   },
   "include": [
@@ -18,3 +17,4 @@
     "expo-env.d.ts"
   ]
 }
+

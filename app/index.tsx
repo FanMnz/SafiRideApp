@@ -1,20 +1,24 @@
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from "react-native";
+import { useRouter } from "expo-router"; // 🔹 Expo Router et non React Navigation
+import React from "react";
 
-export default function HomeScreen() {
+export default function Index() {
+  const router = useRouter(); // ✅ Expo Router
+
   return (
     <ImageBackground
-      source={require("../assets/images/background.png")}
+      source={require("../assets/images/background.png")} // 🔹 Assure-toi que l'image est bien placée
       style={styles.background}
     >
       <View style={styles.overlay}>
-        {/* Message de bienvenue */}
+        {/* Titre */}
         <Text style={styles.title}>Bienvenue sur 🚖 SafiRide</Text>
         <Text style={styles.subtitle}>
           Trouvez des trajets partagés facilement et voyagez en toute sérénité.
         </Text>
 
-        {/* Bouton d'action */}
-        <TouchableOpacity style={styles.button}>
+        {/* ✅ Bouton pour naviguer */}
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/explore")}>
           <Text style={styles.buttonText}>Explorer les trajets</Text>
         </TouchableOpacity>
       </View>
@@ -22,6 +26,7 @@ export default function HomeScreen() {
   );
 }
 
+// ✅ Ajout du style
 const styles = StyleSheet.create({
   background: {
     flex: 1,
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Fond assombri pour bien voir le texte
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // 🔹 Fond sombre pour mieux voir le texte
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -49,8 +54,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    //backgroundColor: "#28a745", // Vert
-    //backgroundColor: "#FFD700", bleu
     backgroundColor: "#9ACD32",
     paddingVertical: 12,
     paddingHorizontal: 24,
@@ -62,4 +65,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
