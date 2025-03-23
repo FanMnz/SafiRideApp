@@ -1,31 +1,26 @@
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from "react-native";
-import { useRouter } from "expo-router"; // 🔹 Expo Router et non React Navigation
+import { useRouter } from "expo-router";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import "~/locales/i18n"; // Assure que la config i18n est chargée
 
 export default function Index() {
-  const router = useRouter(); // ✅ Expo Router
+  const router = useRouter();  //expo router
+  const { t } = useTranslation(); // 📌 Hook de traduction
 
   return (
-    <ImageBackground
-      source={require("../assets/images/background.png")} // 🔹 Assure-toi que l'image est bien placée
-      style={styles.background}
-    >
+    <ImageBackground source={require("../assets/images/background.png")} style={styles.background}>
       <View style={styles.overlay}>
-        {/* Titre */}
-        <Text style={styles.title}>Bienvenue sur 🚖 SafiRide</Text>
-        <Text style={styles.subtitle}>
-          Trouvez des trajets partagés facilement et voyagez en toute sérénité.
-        </Text>
+        <Text style={styles.title}>{t("welcome")}</Text>
+        <Text style={styles.subtitle}>{t("description")}</Text>
 
-        {/* ✅ Bouton pour naviguer */}
         <TouchableOpacity style={styles.button} onPress={() => router.push("/explore")}>
-          <Text style={styles.buttonText}>Explorer les trajets</Text>
+          <Text style={styles.buttonText}>{t("explore")}</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
   );
 }
-
 // ✅ Ajout du style
 const styles = StyleSheet.create({
   background: {

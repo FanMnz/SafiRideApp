@@ -1,19 +1,23 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import "~/locales/i18n";
 
 export default function ExploreScreen() {
   const router = useRouter();
+  const { t } = useTranslation(); // 📌 Hook pour la traduction
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🚗 Explorer les trajets</Text>
-      <Text style={styles.subtitle}>Découvrez les trajets disponibles près de chez vous.</Text>
+      <Text style={styles.title}>🚗 {t("explore")}</Text>
+      <Text style={styles.subtitle}>{t("explore_description")}</Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.back()} // ✅ Retour à la page précédente
       >
-        <Text style={styles.buttonText}>🔙 Retour</Text>
+        <Text style={styles.buttonText}>🔙 {t("back")}</Text>
       </TouchableOpacity>
     </View>
   );
