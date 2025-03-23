@@ -12,7 +12,15 @@
     "mobile_money": "Mobile Money",
     "bank_card": "Bank Card",
     "bank_transfer": "Bank Transfer",
-    "airtime": "Airtime Recharge"
+    "airtime": "Airtime Recharge",
+    "mobile_money_description": "Add funds via mobile money services.",
+    "bank_card_description": "Use your credit or debit card to top up your wallet.",
+    "add_funds": "Add Funds",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "register": "Register",
+    "already_have_account": "Already have an account? Log in"
   }
   
   

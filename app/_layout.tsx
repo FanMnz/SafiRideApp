@@ -57,6 +57,14 @@ export default function Layout() {
             tabBarIcon: ({ color, size }) => <Ionicons name="person" size={size} color={color} />,
           }}
         />
+        <Tabs.Screen
+          name="signup"
+          options={{
+            tabBarLabel: t("signup"),
+            tabBarIcon: ({ color, size }) => <Ionicons name="person-add" size={size} color={color} />,
+         }}
+/>
+
       </Tabs>
     </PaperProvider>
   );

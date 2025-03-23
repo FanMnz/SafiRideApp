@@ -12,7 +12,15 @@
     "mobile_money": "Mobile Money",
     "bank_card": "Carte bancaire",
     "bank_transfer": "Virement bancaire",
-    "airtime": "Recharge de Airtime"
+    "airtime": "Recharge de Airtime",
+    "mobile_money_description": "Ajoutez des fonds via les services d’argent mobile.",
+    "bank_card_description": "Utilisez votre carte de crédit ou de débit pour approvisionner votre portefeuille.",
+    "add_funds": "Ajouter des fonds",
+    "signup": "S'inscrire",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "register": "S'inscrire",
+    "already_have_account": "Vous avez déjà un compte ? Connectez-vous"
   }
   
   
