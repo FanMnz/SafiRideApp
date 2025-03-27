@@ -20,7 +20,11 @@
     "email": "Email",
     "password": "Password",
     "register": "Register",
-    "already_have_account": "Already have an account? Log in"
+    "already_have_account": "Already have an account? Log in",
+    "lets_start": "Let's Start",
+    "login": "Login",
+    "login_button": "Sign In",
+    "no_account": "Don't have an account? Sign up"
   }
   
   

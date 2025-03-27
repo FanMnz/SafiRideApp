@@ -20,7 +20,11 @@
     "email": "E-mail",
     "password": "Mot de passe",
     "register": "S'inscrire",
-    "already_have_account": "Vous avez déjà un compte ? Connectez-vous"
+    "already_have_account": "Vous avez déjà un compte ? Connectez-vous",
+    "lets_start": "Commençons",
+    "login": "Connexion",
+    "login_button": "Se connecter",
+    "no_account": "Vous n'avez pas de compte ? Inscrivez-vous"
   }
   
   
